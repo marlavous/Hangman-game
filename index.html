@@ -16,29 +16,37 @@
 
 	<script type="text/javascript">
 
-	// array of words
-	var w1 = ["h", "u", "m", "p", "b", "a", "c", "k", " " ,"w", "h", "a", "l", "e" ]
-	var w2 = ["g", "r", "a", "y", " " ,"w", "h", "a", "l", "e" ]
+	var words = [
+		w1 = ["h", "u", "m", "p", "b", "a", "c", "k", " " ,"w", "h", "a", "l", "e" ],
+		w2 = ["g", "r", "a", "y", " " ,"w", "h", "a", "l", "e" ]
+	]
 		
 	
 
 	var hangman = {
-		currentWord: [],
-		score:0,
-		wins:0,
-		lettersGuessed: [],
-		lettersGuessedDisplay: []
+			currentWord: [],
+			score:0,
+			wins:0,
+			lettersGuessed: [],
+			lettersGuessedDisplay: [],
 		}
+
+	function start(){
+		//this.reset();
+		var newgame = words[Math.floor(Math.random() * words)];
+		this currentWord = new_word;
+			}
+		
 
 	// computer randomly chooses and array.
 	// once array is chosen it is deleted from being chosen again 
 
-	//Press any key to get started
+	//Press any key to get stared
 
 
 	
 	//user has 14 tries to guess//if user guess is in the array it is displayed 
-	lettersGuessed function(event){
+	function lettersGuessed (event){
 	 	for (i = 0; i < w1.length; i++) {
         
         if (w1[i].charAt() === lettersGuessed) {
@@ -75,7 +83,7 @@
 
 
 
-	hangman.game();
+	// hangman.game();
 
 	</script>
 
