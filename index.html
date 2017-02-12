@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman Game</title>
+	<meta name="viewport" content="width=device-width">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+
+</head>
+<body>
+	<h1> Guess any letter to start playing Hangman!</h1>
+	<!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+
+	<div id="div1"></div>
+
+	<script type="text/javascript">
+
+	// array of words
+	var w1 = ["h", "u", "m", "p", "b", "a", "c", "k", " " ,"w", "h", "a", "l", "e" ]
+	var w2 = ["g", "r", "a", "y", " " ,"w", "h", "a", "l", "e" ]
+		
+	
+
+	var hangman = {
+		currentWord: [],
+		score:0,
+		wins:0,
+		lettersGuessed: [],
+		lettersGuessedDisplay: []
+		}
+
+	// computer randomly chooses and array.
+	// once array is chosen it is deleted from being chosen again 
+
+	//Press any key to get started
+
+
+	
+	//user has 14 tries to guess//if user guess is in the array it is displayed 
+	lettersGuessed function(event){
+	 	for (i = 0; i < w1.length; i++) {
+        
+        if (w1[i].charAt() === lettersGuessed) {
+          console.log(currentWord);
+        }
+
+	}
+
+	//user chooses a letter, onkeyevent
+	document.onkeyup = function(event){
+		var keyPress = event.key;
+		hangman.input(keyPress);
+	}
+
+	
+
+	
+	
+	//if letter is not in array is is displayed as letters already guessed
+		//either way tries goes down by one 
+
+	// Display wins: if user completes word in <15 tries their score goes up by one
+		//then computer restarts game w/new word
+
+	//if user runs out of guesses befor word is complete display computer wins
+		
+
+
+
+
+
+
+
+
+
+
+	hangman.game();
+
+	</script>
+
+</body>
+</html>
