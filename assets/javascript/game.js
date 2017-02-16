@@ -39,18 +39,31 @@ function startGame(){
 	}
 
 function checkLetters(letter){
-	var letterInWord = false;
+	var letterInWord = false; //how do you show if the letter is in the word?
+
 	for (var i = 0; i < numBlanks; i++){
 		if(currentWord[i] === letter){
-			letterInWord = true;
-
-	//console.log("we are in the right function", letter)
-
+			letterInWord = true;  //if its true run the loop
 		}
 	}
+
+	if(letterInWord){                            //how do you keep score if they guess right?
+		for(i = 0; i < numBlanks; i++){
+			if(currentWord[i] === letter){
+			blanksAndSuccesses[i] = letter;
+			}
+			//console.log("im inside ths right function", blanksAndSuccesses);
+			}
+		}
+	
+	else{
+		numGuesses --;
+		wrongGuess.push(letter);
+	}
+	//console.log("wrong guesses in this function", wrongGuess);
 }
 
-function levelUp(){  //update html here and determine if user wins
+function roundComplete(){  //update html here and determine if user wins
 
 
 }
